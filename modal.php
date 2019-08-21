@@ -89,6 +89,8 @@
 </div><!-- / modal -->
 
 <!-- modal one start -->
+
+
 <div class="modal fade" id="modalTwo">
   <div class="modal-dialog modal-lg modal-dialog-centered">
       <div class="modal-content">
@@ -104,9 +106,15 @@
             <p id="here"></p>
           </div>
           <div class="col-6">
-            <form class="" action="" method="post">
+            <form class="" action="sendmail.php" method="post">
+              <!-- <input type="hidden" name="Category_name" id="" value=""> -->
+              <input type="hidden" name="service_name" id="service_name" value="">
+
               <div class="form-group">
                 <input type="text" name="name" class="form-control" value="" placeholder="Name"  required>
+              </div>
+              <div class="form-group">
+                <input type="email" name="email" class="form-control" value="" placeholder="email"  required>
               </div>
               <div class="form-group">
                 <div class="input-group">
@@ -120,7 +128,7 @@
                 <input type="text" name="phone" class="form-control phone" value="" placeholder="Phone number" required maxlength="10" >
                 <!-- <span class="error" style="color: red; display: none">* Input digits (0 - 9)</span> -->
               </div>
-              <button type="submit" class="btn btn-outline-danger">Submit</button>
+              <button type="submit" class="btn btn-outline-danger" name="sendmail">Submit</button>
             </form>
           </div>
         </div>
@@ -207,6 +215,9 @@
 
     document.getElementById("headTag").innerHTML = headTag;
      document.getElementById("here").innerHTML = detail;
+     document.getElementById("service_name").value = headTag;
+
+     // $(#service_name).val(headTag);
    });
    });
 
