@@ -13,16 +13,16 @@ $mail = new PHPMailer;
 $mail->isSMTP();                                      // Set mailer to use SMTP
 $mail->Host = '	smtp.mailtrap.io';  // Specify main and backup SMTP servers
 $mail->SMTPAuth = true;                               // Enable SMTP authentication
-$mail->Username = "558d6a653d3c31";                 // SMTP username
-$mail->Password = "32a011528cfc5e";                           // SMTP password
+$mail->Username = EMAIL;                 // SMTP username
+$mail->Password = PASS;                           // SMTP password
 $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
 $mail->Port = 587;                                    // TCP port to connect to
 
-$mail->setFrom("sachinprasad841@gmail.com", 'Home Seva');
+$mail->setFrom("sachinprasad@gmail.com", 'Home Seva');
 $mail->addAddress($_POST['email']);     // Add a recipient
 // $mail->addAddress('ellen@example.com');               // Name is optional
 // $mail->addReplyTo('info@example.com', 'Information');
-$mail->addReplyTo("sachinprasad841@gmail.com");
+$mail->addReplyTo("sachinprasad@gmail.com");
 
 // $mail->addCC('cc@example.com');
 // $mail->addBCC('bcc@example.com');
