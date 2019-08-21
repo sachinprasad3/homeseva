@@ -1,0 +1,11 @@
+@media (max-width:768) {
+  .search-division{
+    margin:120px 150px 100px 150px;
+    text-align: center;
+
+  }
+  .search-division .heading {
+    display: none;
+  }
+
+}
